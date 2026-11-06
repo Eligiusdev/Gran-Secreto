@@ -1,4 +1,5 @@
 1. Página de inicio – index.html
+
 Sección	¿Qué debe contener?
 Barra de navegación	Logo o nombre Medellín Secreta y enlaces a Inicio, Explorar y Categorías.
 Imagen principal (Hero)	Fotografía atractiva de Medellín, título, frase introductoria y botón «Descubrir lugares».
@@ -53,35 +54,35 @@ Botón de exploración	Botón «Ver lugares» para acceder a los sitios de esa c
 Recomendación	Una sección con una categoría o experiencia destacada.
 Pie de página	Nombre del proyecto y enlaces.
 
-1. Naturaleza
+Naturaleza
 
 Parques, jardines, bosques y espacios verdes para descansar y disfrutar del aire libre.
 
 Ejemplos: Parque Arví, Jardín Botánico y Cerro El Volador.
 
 
-2. Cafeterías
+Cafeterías
 
 Cafés especiales, espacios acogedores y lugares para compartir.
 
 Ejemplos: cafeterías de Laureles, El Poblado y Manila.
 
 
-3. Arte y cultura
+Arte y cultura
 
 Museos, murales, galerías, arte urbano y espacios históricos.
 
 Ejemplos: Comuna 13 y Museo Casa de la Memoria.
 
 
-4. Miradores
+Miradores
 
 Lugares para contemplar Medellín desde las alturas y disfrutar de sus paisajes.
 
 Ejemplos: miradores de Las Palmas y Cerro El Volador.
 
 
-5. Turismo y sitios históricos
+Turismo y sitios históricos
 
 Lugares emblemáticos que permiten conocer la historia y las tradiciones de la ciudad.
 
