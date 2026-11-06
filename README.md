@@ -87,3 +87,18 @@ Criterios de aceptación:
 3. Debe existir una sección para consultar los favoritos.
 4. El usuario debe poder eliminar lugares de favoritos.
 5. Los favoritos deben permanecer guardados mediante LocalStorage.
+
+
+2. Página Explorar – explorar.html
+| Sección | ¿Qué debe contener? |
+|--------|--------|
+| Barra de navegación | La misma de la página de inicio. |
+| Encabezado | Título «Explora Medellín» y una descripción de la sección. |
+| Buscador | Un campo para escribir el nombre de un lugar. |
+| Filtros | Opciones para clasificar lugares por categoría, como Naturaleza, Cultura o Miradores. |
+| Catálogo de lugares | Tarjetas con fotografías y datos de los diferentes sitios. |
+| Información de cada lugar | Nombre, barrio o ubicación, descripción, categoría y características principales. |
+| Botón de información | Un enlace o botón «Conocer más» para consultar detalles del lugar. |
+| Pie de página | Información general y enlaces de navegación. |
+
+
