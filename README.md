@@ -15,8 +15,6 @@ Criterios de aceptación:
 4. El menú debe permitir acceder a las secciones principales.
 5. La navegación debe funcionar correctamente.
 
-Prioridad: Alta — Must have.
-
 HU-02. Exploración de lugares
 
 Historia de usuario:
@@ -30,7 +28,6 @@ Criterios de aceptación:
 3. Los lugares deben organizarse en tarjetas visuales.
 4. Las tarjetas deben permitir acceder a más información.
 5. Las imágenes deben corresponder a los lugares publicados.
-
 
 HU-03. Categorías de lugares
 
