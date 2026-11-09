@@ -10,12 +10,9 @@
 
   // ---------- Encabezado y pie (se escriben una sola vez para las 3 paginas) ----------
   const MENU = [['inicio', 'index.html', 'Inicio'], ['categorias', 'pages/categorias.html', 'Categorías'],
-                ['explorar', 'pages/explorar.html', 'Explorar'], ['favoritos', 'pages/explorar.html#favoritos', 'Favoritos']];
-<<<<<<< HEAD
+                ['explorar', 'pages/explorar.html', 'Explorar'], ['favoritos', 'pages/explorar.html#favoritos', 'Favoritos']]
   // Generar los enlaces del menú; el de la página actual se resalta y lleva aria-current (accesibilidad).
-=======
   // Genera los enlaces del menu; el de la pagina actual se resalta y lleva aria-current (accesibilidad).
->>>>>>> 68c2fb7f419133a8aba7e48a6cbb94d908ae6260
   const enlaces = (base, activa) => MENU.map(([k, ruta, txt]) =>
     `<a href="${raiz}${ruta}" ${k === pagina ? 'aria-current="page"' : ''} class="${base} ${k === pagina ? activa : ''}">${txt}</a>`).join('');
   $('#encabezado').className = 'sticky top-0 z-50 bg-green-900 text-white shadow-md';
@@ -24,7 +21,7 @@
       <a href="${raiz}index.html" class="block shrink-0" aria-label="Medellín Secreta, inicio"><img src="${raiz}img/logo.png" alt="Medellín Secreta" class="h-14 w-44 object-cover object-center md:w-52"></a>
       <nav class="hidden items-center gap-8 md:flex" aria-label="Navegación principal">${enlaces('transition-colors duration-200 hover:text-emerald-400', 'font-semibold text-emerald-400')}</nav>
       <details class="relative md:hidden"><!-- menú móvil sin JS: <details> abre y cierra solo -->
-        <summary class="list-none cursor-pointer rounded-md p-2 hover:bg-green-700 [&::-webkit-details-marker]:hidden"><span class="sr-only">Abrir menú de navegación</span>
+        <summary class="list-none cursor-pointer rounded-md  p-2 hover:bg-green-700 [&::-webkit-details-marker]:hidden"><span class="sr-only">Abrir menú de navegación</span>
           <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg></summary>
         <nav class="absolute right-0 top-full mt-2 min-w-48 rounded-lg bg-green-900 p-2 shadow-lg" aria-label="Navegación móvil">${enlaces('block rounded px-4 py-2 hover:bg-green-700', 'font-semibold text-emerald-400')}</nav>
       </details>
