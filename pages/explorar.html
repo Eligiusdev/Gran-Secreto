@@ -4,19 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Explorar | Medellín Secreta</title>
-    <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
-  <header class="navbar">
-    <a href="index.html" class="logo">Medellín Secreta</a>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="categorias.html">Categorías</a></li>
-        <li><a href="explorar.html" class="activo">Explorar</a></li>
-      </ul>
-    </nav>
+  <header class="sticky top-0 z-50 bg-green-900 text-white shadow-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <a href="../index.html" class="text-xl font-bold tracking-wide">Medellín Secreta</a>
+      <nav class="hidden items-center gap-8 md:flex" aria-label="Navegación principal">
+        <a href="../index.html" class="transition-colors duration-200 hover:text-emerald-400">Inicio</a>
+        <a href="categorias.html" class="transition-colors duration-200 hover:text-emerald-400">Categorías</a>
+        <a href="explorar.html" aria-current="page" class="font-semibold text-emerald-400 transition-colors duration-200 hover:text-emerald-400">Explorar</a>
+      </nav>
+      <details class="relative md:hidden">
+        <summary class="list-none cursor-pointer rounded-md p-2 transition-colors duration-200 hover:bg-green-700 [&::-webkit-details-marker]:hidden">
+          <span class="sr-only">Abrir menú de navegación</span>
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </summary>
+        <nav class="absolute right-0 top-full mt-2 min-w-48 rounded-lg bg-green-900 p-2 shadow-lg" aria-label="Navegación móvil">
+          <a href="../index.html" class="block rounded px-4 py-2 transition-colors duration-200 hover:bg-green-700 hover:text-emerald-400">Inicio</a>
+          <a href="categorias.html" class="block rounded px-4 py-2 transition-colors duration-200 hover:bg-green-700 hover:text-emerald-400">Categorías</a>
+          <a href="explorar.html" aria-current="page" class="block rounded px-4 py-2 font-semibold text-emerald-400 transition-colors duration-200 hover:bg-green-700">Explorar</a>
+        </nav>
+      </details>
+    </div>
   </header>
 
   <main class="contenedor">
@@ -201,9 +215,15 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <p class="footer-nombre">Medellín Secreta</p>
-    <p>Descubre los lugares de Medellín que todavía no conoces.</p>
+  <footer class="bg-green-900 px-6 py-8 text-center text-white">
+    <a href="../index.html" class="text-lg font-bold tracking-wide">Medellín Secreta</a>
+    <p class="mt-2 text-green-100">Descubre los secretos de tu ciudad.</p>
+    <nav class="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2" aria-label="Enlaces del pie de página">
+      <a href="../index.html" class="transition-colors duration-200 hover:text-emerald-400">Inicio</a>
+      <a href="categorias.html" class="transition-colors duration-200 hover:text-emerald-400">Categorías</a>
+      <a href="explorar.html" class="transition-colors duration-200 hover:text-emerald-400">Explorar</a>
+    </nav>
+    <p class="mt-6 text-sm text-green-200">&copy; 2026 Medellín Secreta</p>
   </footer>
 
 </body>

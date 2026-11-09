@@ -5,25 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Descubre los lugares escondidos de Medellín: naturaleza, cafeterías, arte, miradores y turismo.">
     <title>Categorías | Medellín Secreta</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
-    <header class="bg-green-900 text-white">
-        <nav class="mx-auto flex max-w-6xl flex-wrap items-center justify-between px-6 py-4" aria-label="Navegación principal">
-            <a href="../index.html" class="text-xl font-bold">Medellín Secreta</a>
-
-            <button id="boton-menu" type="button" class="rounded border border-white px-3 py-1 md:hidden" aria-controls="menu" aria-expanded="false" aria-label="Abrir o cerrar menú">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-
-            <ul id="menu" class="hidden w-full space-y-2 pt-4 md:flex md:w-auto md:gap-6 md:space-y-0 md:pt-0">
-                <li><a href="../index.html" class="block hover:underline">Inicio</a></li>
-                <li><a href="categorias.html" aria-current="page" class="block font-bold underline">Categorías</a></li>
-                <li><a href="explorar.html" class="block hover:underline">Explorar</a></li>
-            </ul>
-        </nav>
+    <header class="sticky top-0 z-50 bg-green-900 text-white shadow-md">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+            <a href="../index.html" class="text-xl font-bold tracking-wide">Medellín Secreta</a>
+            <nav class="hidden items-center gap-8 md:flex" aria-label="Navegación principal">
+                <a href="../index.html" class="transition-colors duration-200 hover:text-emerald-400">Inicio</a>
+                <a href="categorias.html" aria-current="page" class="font-semibold text-emerald-400 transition-colors duration-200 hover:text-emerald-400">Categorías</a>
+                <a href="explorar.html" class="transition-colors duration-200 hover:text-emerald-400">Explorar</a>
+            </nav>
+            <details class="relative md:hidden">
+                <summary class="list-none cursor-pointer rounded-md p-2 transition-colors duration-200 hover:bg-green-700 [&::-webkit-details-marker]:hidden">
+                    <span class="sr-only">Abrir menú de navegación</span>
+                    <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </summary>
+                <nav class="absolute right-0 top-full mt-2 min-w-48 rounded-lg bg-green-900 p-2 shadow-lg" aria-label="Navegación móvil">
+                    <a href="../index.html" class="block rounded px-4 py-2 transition-colors duration-200 hover:bg-green-700 hover:text-emerald-400">Inicio</a>
+                    <a href="categorias.html" aria-current="page" class="block rounded px-4 py-2 font-semibold text-emerald-400 transition-colors duration-200 hover:bg-green-700">Categorías</a>
+                    <a href="explorar.html" class="block rounded px-4 py-2 transition-colors duration-200 hover:bg-green-700 hover:text-emerald-400">Explorar</a>
+                </nav>
+            </details>
+        </div>
     </header>
 
     <main class="mx-auto max-w-6xl px-6 py-10">
@@ -137,19 +143,15 @@
         </section>
     </main>
 
-    <footer class="bg-green-900 p-5 text-center text-white">
-        <p class="mb-3 text-lg font-bold">Medellín Secreta</p>
-        <p>&copy; 2026 Medellín Secreta - Descubre los secretos de tu ciudad</p>
+    <footer class="bg-green-900 px-6 py-8 text-center text-white">
+        <a href="../index.html" class="text-lg font-bold tracking-wide">Medellín Secreta</a>
+        <p class="mt-2 text-green-100">Descubre los secretos de tu ciudad.</p>
+        <nav class="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2" aria-label="Enlaces del pie de página">
+            <a href="../index.html" class="transition-colors duration-200 hover:text-emerald-400">Inicio</a>
+            <a href="categorias.html" class="transition-colors duration-200 hover:text-emerald-400">Categorías</a>
+            <a href="explorar.html" class="transition-colors duration-200 hover:text-emerald-400">Explorar</a>
+        </nav>
+        <p class="mt-6 text-sm text-green-200">&copy; 2026 Medellín Secreta</p>
     </footer>
-
-    <script>
-        const boton = document.getElementById('boton-menu');
-        const menu = document.getElementById('menu');
-
-        boton.addEventListener('click', () => {
-            const oculto = menu.classList.toggle('hidden');
-            boton.setAttribute('aria-expanded', String(!oculto));
-        });
-    </script>
 </body>
 </html>
