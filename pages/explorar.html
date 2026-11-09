@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora los lugares de Medellín que todavía no conoces: naturaleza, cafeterías, arte, miradores y sitios históricos.">
+    <title>Explorar | Medellín Secreta</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-green-900 text-white">
+        <nav class="mx-auto flex max-w-6xl flex-wrap items-center justify-between px-6 py-4" aria-label="Navegación principal">
+            <a href="../index.html" class="text-xl font-bold">Medellín Secreta</a>
+
+            <button id="boton-menu" type="button" class="rounded border border-white px-3 py-1 md:hidden" aria-controls="menu" aria-expanded="false" aria-label="Abrir o cerrar menú">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <ul id="menu" class="hidden w-full space-y-2 pt-4 md:flex md:w-auto md:gap-6 md:space-y-0 md:pt-0">
+                <li><a href="../index.html" class="block hover:underline">Inicio</a></li>
+                <li><a href="categorias.html" class="block hover:underline">Categorías</a></li>
+                <li><a href="explorar.html" aria-current="page" class="block font-bold underline">Explorar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-6 py-10">
+        <h1 class="mb-2 text-3xl font-bold text-green-900">Explora Medellín</h1>
+        <p class="mb-8 text-gray-600">Medellín tiene lugares que todavía no conoces. Descubre sitios para visitar y encuentra tu próximo plan.</p>
+
+        <div role="search" class="mb-10">
+            <label for="buscador" class="mb-2 block font-bold text-green-900">Buscar un lugar</label>
+            <input type="search" id="buscador" placeholder="Escribe el nombre de un lugar" class="w-full rounded-lg border-2 border-gray-300 bg-white px-4 py-3 focus:outline-hidden focus:ring-4 focus:ring-green-700">
+        </div>
+
+        <p id="sin-resultados" role="status" hidden class="mb-10 rounded-lg bg-white p-6 text-center text-gray-600 shadow-md">No encontramos lugares con ese nombre. Prueba con otra palabra.</p>
+
+        <section id="naturaleza" data-categoria class="mb-12">
+            <h2 class="mb-1 text-2xl font-bold text-green-900">Naturaleza</h2>
+            <p class="mb-6 text-gray-600">Parques, jardines, bosques y espacios verdes para descansar y disfrutar del aire libre.</p>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+                <article data-lugar class="flex flex-col overflow-hidden rounded-lg bg-white shadow-md">
+                    <img src="../img/jardin-botanico.jpg" alt="Jardín Botánico de Medellín" loading="lazy" class="h-48 w-full object-cover">
+                    <div class="flex flex-1 flex-col p-5">
+                        <h3 class="mb-1 text-xl font-bold text-green-900">Jardín Botánico</h3>
+                        <p class="mb-2 text-sm font-semibold text-green-800">Sevilla</p>
+                        <p class="mb-4 text-gray-600">Un oasis verde en el centro de la ciudad, con orquidiario, lago y senderos para caminar.</p>
+                        <ul class="mb-4 flex flex-wrap gap-2">
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Entrada libre</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Ideal en familia</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Fotografía</li>
+                        </ul>
+                        <a href="#" class="mt-auto inline-block self-start rounded bg-green-900 px-4 py-2 text-white hover:bg-green-700" aria-label="Conocer más sobre el Jardín Botánico">Conocer más</a>
+                    </div>
+                </article>
+
+                <article data-lugar class="flex flex-col overflow-hidden rounded-lg bg-white shadow-md">
+                    <img src="../img/parque-arvi.jpg" alt="Parque Arví" loading="lazy" class="h-48 w-full object-cover">
+                    <div class="flex flex-1 flex-col p-5">
+                        <h3 class="mb-1 text-xl font-bold text-green-900">Parque Arví</h3>
+                        <p class="mb-2 text-sm font-semibold text-green-800">Santa Elena</p>
+                        <p class="mb-4 text-gray-600">Reserva natural en las montañas, a la que se llega en Metrocable, con caminatas y mercado campesino.</p>
+                        <ul class="mb-4 flex flex-wrap gap-2">
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Metrocable</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Senderismo</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Todo el día</li>
+                        </ul>
+                        <a href="#" class="mt-auto inline-block self-start rounded bg-green-900 px-4 py-2 text-white hover:bg-green-700" aria-label="Conocer más sobre el Parque Arví">Conocer más</a>
+                    </div>
+                </article>
+
+                <article data-lugar class="flex flex-col overflow-hidden rounded-lg bg-white shadow-md">
+                    <img src="../img/cerro-el-volador.jpg" alt="Cerro El Volador" loading="lazy" class="h-48 w-full object-cover">
+                    <div class="flex flex-1 flex-col p-5">
+                        <h3 class="mb-1 text-xl font-bold text-green-900">Cerro El Volador</h3>
+                        <p class="mb-2 text-sm font-semibold text-green-800">Robledo</p>
+                        <p class="mb-4 text-gray-600">Cerro con bosque y senderos que ofrece una vista amplia del valle de Aburrá.</p>
+                        <ul class="mb-4 flex flex-wrap gap-2">
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Vista panorámica</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Gratis</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Atardeceres</li>
+                        </ul>
+                        <a href="#" class="mt-auto inline-block self-start rounded bg-green-900 px-4 py-2 text-white hover:bg-green-700" aria-label="Conocer más sobre el Cerro El Volador">Conocer más</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="cafeterias" data-categoria class="mb-12">
+            <h2 class="mb-1 text-2xl font-bold text-green-900">Cafeterías</h2>
+            <p class="mb-6 text-gray-600">Cafés especiales, espacios acogedores y lugares para compartir.</p>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+                <article data-lugar class="flex flex-col overflow-hidden rounded-lg bg-white shadow-md">
+                    <img src="../img/cafes-laureles.jpg" alt="Cafeterías de Laureles" loading="lazy" class="h-48 w-full object-cover">
+                    <div class="flex flex-1 flex-col p-5">
+                        <h3 class="mb-1 text-xl font-bold text-green-900">Cafeterías de Laureles</h3>
+                        <p class="mb-2 text-sm font-semibold text-green-800">Laureles</p>
+                        <p class="mb-4 text-gray-600">Cafés especiales y espacios acogedores para compartir en un barrio tranquilo.</p>
+                        <ul class="mb-4 flex flex-wrap gap-2">
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Café especial</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Ambiente tranquilo</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Para compartir</li>
+                        </ul>
+                        <a href="#" class="mt-auto inline-block self-start rounded bg-green-900 px-4 py-2 text-white hover:bg-green-700" aria-label="Conocer más sobre las cafeterías de Laureles">Conocer más</a>
+                    </div>
+                </article>
+
+                <article data-lugar class="flex flex-col overflow-hidden rounded-lg bg-white shadow-md">
+                    <img src="../img/cafes-el-poblado.jpg" alt="Cafeterías de El Poblado" loading="lazy" class="h-48 w-full object-cover">
+                    <div class="flex flex-1 flex-col p-5">
+                        <h3 class="mb-1 text-xl font-bold text-green-900">Cafeterías de El Poblado</h3>
+                        <p class="mb-2 text-sm font-semibold text-green-800">El Poblado</p>
+                        <p class="mb-4 text-gray-600">Cafés con buen ambiente para encontrarse con amigos o trabajar un rato.</p>
+                        <ul class="mb-4 flex flex-wrap gap-2">
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Café especial</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Terrazas</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Para trabajar</li>
+                        </ul>
+                        <a href="#" class="mt-auto inline-block self-start rounded bg-green-900 px-4 py-2 text-white hover:bg-green-700" aria-label="Conocer más sobre las cafeterías de El Poblado">Conocer más</a>
+                    </div>
+                </article>
+
+                <article data-lugar class="flex flex-col overflow-hidden rounded-lg bg-white shadow-md">
+                    <img src="../img/cafes-manila.jpg" alt="Cafeterías de Manila" loading="lazy" class="h-48 w-full object-cover">
+                    <div class="flex flex-1 flex-col p-5">
+                        <h3 class="mb-1 text-xl font-bold text-green-900">Cafeterías de Manila</h3>
+                        <p class="mb-2 text-sm font-semibold text-green-800">Manila, El Poblado</p>
+                        <p class="mb-4 text-gray-600">Cafés con carácter en una de las zonas más animadas de El Poblado.</p>
+                        <ul class="mb-4 flex flex-wrap gap-2">
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Café especial</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Ambiente joven</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Para compartir</li>
+                        </ul>
+                        <a href="#" class="mt-auto inline-block self-start rounded bg-green-900 px-4 py-2 text-white hover:bg-green-700" aria-label="Conocer más sobre las cafeterías de Manila">Conocer más</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="arte-cultura" data-categoria class="mb-12">
+            <h2 class="mb-1 text-2xl font-bold text-green-900">Arte y cultura</h2>
+            <p class="mb-6 text-gray-600">Museos, murales, galerías, arte urbano y espacios históricos.</p>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+                <article data-lugar class="flex flex-col overflow-hidden rounded-lg bg-white shadow-md">
+                    <img src="../img/comuna-13.jpg" alt="Comuna 13" loading="lazy" class="h-48 w-full object-cover">
+                    <div class="flex flex-1 flex-col p-5">
+                        <h3 class="mb-1 text-xl font-bold text-green-900">Comuna 13</h3>
+                        <p class="mb-2 text-sm font-semibold text-green-800">San Javier</p>
+                        <p class="mb-4 text-gray-600">Barrio transformado por el arte urbano, con murales, grafitis, música y escaleras eléctricas.</p>
+                        <ul class="mb-4 flex flex-wrap gap-2">
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Murales</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Tour guiado</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Historia viva</li>
+                        </ul>
+                        <a href="#" class="mt-auto inline-block self-start rounded bg-green-900 px-4 py-2 text-white hover:bg-green-700" aria-label="Conocer más sobre la Comuna 13">Conocer más</a>
+                    </div>
+                </article>
+
+                <article data-lugar class="flex flex-col overflow-hidden rounded-lg bg-white shadow-md">
+                    <img src="../img/casa-de-la-memoria.jpg" alt="Museo Casa de la Memoria" loading="lazy" class="h-48 w-full object-cover">
+                    <div class="flex flex-1 flex-col p-5">
+                        <h3 class="mb-1 text-xl font-bold text-green-900">Museo Casa de la Memoria</h3>
+                        <p class="mb-2 text-sm font-semibold text-green-800">Boston</p>
+                        <p class="mb-4 text-gray-600">Espacio que reconoce las historias del conflicto en Colombia y promueve la reflexión y la paz.</p>
+                        <ul class="mb-4 flex flex-wrap gap-2">
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Museo</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Exposiciones</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Reflexión</li>
+                        </ul>
+                        <a href="#" class="mt-auto inline-block self-start rounded bg-green-900 px-4 py-2 text-white hover:bg-green-700" aria-label="Conocer más sobre el Museo Casa de la Memoria">Conocer más</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="miradores" data-categoria class="mb-12">
+            <h2 class="mb-1 text-2xl font-bold text-green-900">Miradores</h2>
+            <p class="mb-6 text-gray-600">Lugares para contemplar Medellín desde las alturas y disfrutar de sus paisajes.</p>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+                <article data-lugar class="flex flex-col overflow-hidden rounded-lg bg-white shadow-md">
+                    <img src="../img/mirador-las-palmas.jpg" alt="Miradores de Las Palmas" loading="lazy" class="h-48 w-full object-cover">
+                    <div class="flex flex-1 flex-col p-5">
+                        <h3 class="mb-1 text-xl font-bold text-green-900">Miradores de Las Palmas</h3>
+                        <p class="mb-2 text-sm font-semibold text-green-800">Vía Las Palmas</p>
+                        <p class="mb-4 text-gray-600">Paradas a lo largo de la vía con vistas de Medellín desde las alturas.</p>
+                        <ul class="mb-4 flex flex-wrap gap-2">
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Vista de la ciudad</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Gastronomía</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Atardeceres</li>
+                        </ul>
+                        <a href="#" class="mt-auto inline-block self-start rounded bg-green-900 px-4 py-2 text-white hover:bg-green-700" aria-label="Conocer más sobre los miradores de Las Palmas">Conocer más</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="turismo" data-categoria class="mb-12">
+            <h2 class="mb-1 text-2xl font-bold text-green-900">Turismo y sitios históricos</h2>
+            <p class="mb-6 text-gray-600">Lugares emblemáticos que permiten conocer la historia y las tradiciones de la ciudad.</p>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+                <article data-lugar class="flex flex-col overflow-hidden rounded-lg bg-white shadow-md">
+                    <img src="../img/pueblito-paisa.jpg" alt="Pueblito Paisa" loading="lazy" class="h-48 w-full object-cover">
+                    <div class="flex flex-1 flex-col p-5">
+                        <h3 class="mb-1 text-xl font-bold text-green-900">Pueblito Paisa</h3>
+                        <p class="mb-2 text-sm font-semibold text-green-800">Cerro Nutibara</p>
+                        <p class="mb-4 text-gray-600">Réplica de un pueblo antioqueño tradicional, con plaza, iglesia y vista a la ciudad.</p>
+                        <ul class="mb-4 flex flex-wrap gap-2">
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Tradición paisa</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Artesanías</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Vista a la ciudad</li>
+                        </ul>
+                        <a href="#" class="mt-auto inline-block self-start rounded bg-green-900 px-4 py-2 text-white hover:bg-green-700" aria-label="Conocer más sobre el Pueblito Paisa">Conocer más</a>
+                    </div>
+                </article>
+
+                <article data-lugar class="flex flex-col overflow-hidden rounded-lg bg-white shadow-md">
+                    <img src="../img/centro-historico.jpg" alt="Lugares históricos del centro de Medellín" loading="lazy" class="h-48 w-full object-cover">
+                    <div class="flex flex-1 flex-col p-5">
+                        <h3 class="mb-1 text-xl font-bold text-green-900">Lugares históricos del centro</h3>
+                        <p class="mb-2 text-sm font-semibold text-green-800">Centro</p>
+                        <p class="mb-4 text-gray-600">Plazas, edificios y esculturas, como la Plaza Botero, que cuentan la historia de la ciudad.</p>
+                        <ul class="mb-4 flex flex-wrap gap-2">
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Plaza Botero</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">Esculturas</li>
+                            <li class="rounded-full bg-green-100 px-3 py-1 text-sm text-green-900">A pie</li>
+                        </ul>
+                        <a href="#" class="mt-auto inline-block self-start rounded bg-green-900 px-4 py-2 text-white hover:bg-green-700" aria-label="Conocer más sobre los lugares históricos del centro">Conocer más</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-green-900 p-5 text-center text-white">
+        <p class="mb-1 text-lg font-bold">Medellín Secreta</p>
+        <p class="mb-3">Descubre los lugares de Medellín que todavía no conoces.</p>
+        <nav aria-label="Enlaces del pie de página">
+            <ul class="flex flex-wrap justify-center gap-6">
+                <li><a href="../index.html" class="underline hover:no-underline">Inicio</a></li>
+                <li><a href="categorias.html" class="underline hover:no-underline">Categorías</a></li>
+                <li><a href="explorar.html" class="underline hover:no-underline">Explorar</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        // Menú del celular
+        const boton = document.getElementById('boton-menu');
+        const menu = document.getElementById('menu');
+
+        boton.addEventListener('click', () => {
+            const oculto = menu.classList.toggle('hidden');
+            boton.setAttribute('aria-expanded', String(!oculto));
+        });
+
+        // Buscador: muestra solo los lugares que coinciden con lo escrito
+        const buscador = document.getElementById('buscador');
+        const lugares = document.querySelectorAll('[data-lugar]');
+        const categorias = document.querySelectorAll('[data-categoria]');
+        const sinResultados = document.getElementById('sin-resultados');
+
+        function normalizar(texto) {
+            return texto.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        }
+
+        buscador.addEventListener('input', () => {
+            const busqueda = normalizar(buscador.value.trim());
+
+            lugares.forEach(lugar => {
+                lugar.hidden = !normalizar(lugar.textContent).includes(busqueda);
+            });
+
+            categorias.forEach(categoria => {
+                categoria.hidden = !categoria.querySelector('[data-lugar]:not([hidden])');
+            });
+
+            sinResultados.hidden = document.querySelector('[data-lugar]:not([hidden])') !== null;
+        });
+    </script>
+</body>
+</html>
