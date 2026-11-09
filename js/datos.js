@@ -1,14 +1,13 @@
 // datos.js — ÚNICA fuente de datos. Agregar un lugar aquí lo muestra solo en todas las páginas.
 
-// Categorías: id (se usa en la URL y en cada lugar), nombre visible, icono (Bootstrap Icons),
-// degradado de color (clases Tailwind) y descripción corta.
+// Categorías: id (se usa en el enlace #id y en cada lugar), nombre, descripción corta y foto (si falta, se usa el reemplazo).
 const CATEGORIAS = [
-  { id: 'naturaleza',  nombre: 'Naturaleza',     icono: 'bi-tree',         color: 'from-emerald-500 to-green-700',  texto: 'Parques, jardines y espacios para respirar.' },
-  { id: 'cafes',       nombre: 'Cafés',          icono: 'bi-cup-hot',      color: 'from-amber-500 to-orange-700',   texto: 'Cafés especiales y rincones acogedores.' },
-  { id: 'gastronomia', nombre: 'Gastronomía',    icono: 'bi-egg-fried',    color: 'from-red-500 to-rose-700',       texto: 'Sabores y plazas para comer como paisa.' },
-  { id: 'miradores',   nombre: 'Miradores',      icono: 'bi-binoculars',   color: 'from-sky-500 to-blue-700',       texto: 'Las mejores vistas del valle de Aburrá.' },
-  { id: 'arte',        nombre: 'Arte y cultura', icono: 'bi-palette',      color: 'from-fuchsia-500 to-purple-700', texto: 'Murales, museos e historia viva.' },
-  { id: 'turismo',     nombre: 'Turismo',        icono: 'bi-geo-alt',      color: 'from-teal-500 to-cyan-700',      texto: 'Lugares emblemáticos de la ciudad.' }
+  { id: 'naturaleza',  nombre: 'Naturaleza',                  imagen: 'img/naturaleza.jpg',         texto: 'Parques, jardines, bosques y espacios verdes para descansar al aire libre.' },
+  { id: 'cafes',       nombre: 'Cafeterías',                  imagen: 'img/cafeterias.jpg',         texto: 'Cafés especiales, espacios acogedores y lugares para compartir.' },
+  { id: 'gastronomia', nombre: 'Gastronomía',                 imagen: 'img/plaza-minorista.jpg',    texto: 'Plazas y zonas para probar la comida tradicional y local.' },
+  { id: 'miradores',   nombre: 'Miradores',                   imagen: 'img/mirador-las-palmas.jpg', texto: 'Lugares para contemplar Medellín desde las alturas.' },
+  { id: 'arte',        nombre: 'Arte y cultura',              imagen: 'img/arte.png',               texto: 'Museos, murales, galerías, arte urbano y espacios históricos.' },
+  { id: 'turismo',     nombre: 'Turismo y sitios históricos', imagen: 'img/pueblito.jpg',           texto: 'Lugares emblemáticos para conocer la historia y las tradiciones de la ciudad.' }
 ];
 
 // Lugares: id único (lo que se guarda en favoritos), categoría (debe existir arriba),
@@ -30,7 +29,7 @@ const LUGARES = [
     descripcion: 'Cafés especiales y espacios acogedores para compartir en un barrio tranquilo.',
     detalle: 'Un barrio residencial con cafés de especialidad en casas y calles arboladas, perfecto para conversar sin afán.',
     tags: ['Café especial', 'Ambiente tranquilo', 'Para compartir'] },
-  { id: 'cafes-el-poblado', categoria: 'cafes', nombre: 'Cafeterías de El Poblado', zona: 'El Poblado',
+  { id: 'cafes-poblados', categoria: 'cafes', nombre: 'Cafeterías de El Poblado', zona: 'El Poblado',
     descripcion: 'Cafés con buen ambiente para encontrarse con amigos o trabajar un rato.',
     detalle: 'Cafés con terrazas y buena conexión, pensados para reunirse con amigos o trabajar unas horas.',
     tags: ['Café especial', 'Terrazas', 'Para trabajar'] },

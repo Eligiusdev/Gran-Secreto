@@ -5,34 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Descubre los lugares escondidos de Medellín: naturaleza, cafeterías, arte, miradores y turismo.">
     <title>Categorías | Medellín Secreta</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script><!-- Tailwind CSS -->
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <header class="sticky top-0 z-50 bg-green-900 text-white shadow-md">
-        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-            <a href="../index.html" class="block shrink-0" aria-label="Medellín Secreta, inicio">
-                <img src="../img/logo.png" alt="Medellín Secreta" class="h-14 w-44 object-cover object-center md:w-52">
-            </a>
-            <nav class="hidden items-center gap-8 md:flex" aria-label="Navegación principal">
-                <a href="../index.html" class="transition-colors duration-200 hover:text-emerald-400">Inicio</a>
-                <a href="categorias.html" aria-current="page" class="font-semibold text-emerald-400 transition-colors duration-200 hover:text-emerald-400">Categorías</a>
-                <a href="explorar.html" class="transition-colors duration-200 hover:text-emerald-400">Explorar</a>
-            </nav>
-            <details class="relative md:hidden">
-                <summary class="list-none cursor-pointer rounded-md p-2 transition-colors duration-200 hover:bg-green-700 [&::-webkit-details-marker]:hidden">
-                    <span class="sr-only">Abrir menú de navegación</span>
-                    <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </summary>
-                <nav class="absolute right-0 top-full mt-2 min-w-48 rounded-lg bg-green-900 p-2 shadow-lg" aria-label="Navegación móvil">
-                    <a href="../index.html" class="block rounded px-4 py-2 transition-colors duration-200 hover:bg-green-700 hover:text-emerald-400">Inicio</a>
-                    <a href="categorias.html" aria-current="page" class="block rounded px-4 py-2 font-semibold text-emerald-400 transition-colors duration-200 hover:bg-green-700">Categorías</a>
-                    <a href="explorar.html" class="block rounded px-4 py-2 transition-colors duration-200 hover:bg-green-700 hover:text-emerald-400">Explorar</a>
-                </nav>
-            </details>
-        </div>
-    </header>
+<body class="bg-gray-50 text-gray-800 antialiased" data-raiz="../" data-pagina="categorias">
+    <header id="encabezado"></header><!-- lo llena app.js -->
 
     <main class="mx-auto max-w-6xl px-6 py-10">
         <section class="relative mb-10 overflow-hidden rounded-lg bg-green-900 text-white">
@@ -41,60 +18,14 @@
                 <h1 class="mb-3 text-4xl font-bold md:text-5xl">Explora por categorías</h1>
                 <p class="max-w-xl text-lg">Elige qué quieres descubrir en Medellín: naturaleza, café, arte, vistas y mucha
                     historia.</p>
-                <a href="#categorias"
+                <a href="#listaCategorias"
                     class="mt-6 inline-block rounded bg-white px-5 py-3 font-bold text-green-900 hover:bg-gray-200">Ver
                     categorías</a>
             </div>
         </section>
 
         <h2 class="sr-only">Categorías</h2>
-        <div id="categorias" class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <article class="flex flex-col overflow-hidden rounded-lg bg-white shadow-md">
-                <img src="../img/naturaleza.jpg" alt="Naturaleza en Medellín" loading="lazy" class="h-48 w-full object-cover">
-                <div class="flex flex-1 flex-col p-5">
-                    <h3 class="mb-2 text-xl font-bold text-green-900">Naturaleza</h3>
-                    <p class="mb-2 text-gray-600">Parques, jardines, bosques y espacios verdes para descansar y disfrutar del aire libre.</p>
-                    <a href="explorar.html#naturaleza" class="mt-auto inline-block self-start rounded bg-green-900 px-4 py-2 text-white hover:bg-green-700" aria-label="Ver lugares de Naturaleza">Ver lugares</a>
-                </div>
-            </article>
-
-            <article class="flex flex-col overflow-hidden rounded-lg bg-white shadow-md">
-                <img src="../img/cafeterias.jpg" alt="Cafeterías de Medellín" loading="lazy" class="h-48 w-full object-cover">
-                <div class="flex flex-1 flex-col p-5">
-                    <h3 class="mb-2 text-xl font-bold text-green-900">Cafeterías</h3>
-                    <p class="mb-2 text-gray-600">Cafés especiales, espacios acogedores y lugares para compartir.</p>
-                    <a href="explorar.html#cafeterias" class="mt-auto inline-block self-start rounded bg-green-900 px-4 py-2 text-white hover:bg-green-700" aria-label="Ver lugares de Cafeterías">Ver lugares</a>
-                </div>
-            </article>
-
-            <article class="flex flex-col overflow-hidden rounded-lg bg-white shadow-md">
-                <img src="../img/arte.png" alt="Arte urbano y murales en la Comuna 13 de Medellín" loading="lazy" class="h-48 w-full object-cover">
-                <div class="flex flex-1 flex-col p-5">
-                    <h3 class="mb-2 text-xl font-bold text-green-900">Arte y cultura</h3>
-                    <p class="mb-2 text-gray-600">Museos, murales, galerías, arte urbano y espacios históricos.</p>
-                    <a href="explorar.html#arte-cultura" class="mt-auto inline-block self-start rounded bg-green-900 px-4 py-2 text-white hover:bg-green-700" aria-label="Ver lugares de Arte y cultura">Ver lugares</a>
-                </div>
-            </article>
-
-            <article class="flex flex-col overflow-hidden rounded-lg bg-white shadow-md">
-                <img src="../img/miradores.jpg" alt="Vista panorámica de Medellín desde un mirador" loading="lazy" class="h-48 w-full object-cover">
-                <div class="flex flex-1 flex-col p-5">
-                    <h3 class="mb-2 text-xl font-bold text-green-900">Miradores</h3>
-                    <p class="mb-2 text-gray-600">Lugares para contemplar Medellín desde las alturas y disfrutar de sus paisajes.</p>
-                    <a href="explorar.html#miradores" class="mt-auto inline-block self-start rounded bg-green-900 px-4 py-2 text-white hover:bg-green-700" aria-label="Ver lugares de Miradores">Ver lugares</a>
-                </div>
-            </article>
-
-            <article class="flex flex-col overflow-hidden rounded-lg bg-white shadow-md">
-                <img src="../img/pueblito.jpg" alt="Turismo y sitios históricos en Medellín" loading="lazy" class="h-48 w-full object-cover">
-                <div class="flex flex-1 flex-col p-5">
-                    <h3 class="mb-2 text-xl font-bold text-green-900">Turismo y sitios históricos</h3>
-                    <p class="mb-2 text-gray-600">Lugares emblemáticos que permiten conocer la historia y las tradiciones de la ciudad.</p>
-                    <a href="explorar.html#turismo" class="mt-auto inline-block self-start rounded bg-green-900 px-4 py-2 text-white hover:bg-green-700" aria-label="Ver lugares de Turismo y sitios históricos">Ver lugares</a>
-                </div>
-            </article>
-
-        </div>
+        <div id="listaCategorias" class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"></div><!-- tarjetas generadas por app.js desde datos.js -->
         <section class="mt-12">
             <h2 class="mb-6 text-2xl font-bold text-green-900">¿Cómo funciona?</h2>
             <ol class="grid gap-6 md:grid-cols-3">
@@ -145,15 +76,8 @@
         </section>
     </main>
 
-    <footer class="bg-green-900 px-6 py-8 text-center text-white">
-        <a href="../index.html" class="text-lg font-bold tracking-wide">Medellín Secreta</a>
-        <p class="mt-2 text-green-100">Descubre los secretos de tu ciudad.</p>
-        <nav class="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2" aria-label="Enlaces del pie de página">
-            <a href="../index.html" class="transition-colors duration-200 hover:text-emerald-400">Inicio</a>
-            <a href="categorias.html" class="transition-colors duration-200 hover:text-emerald-400">Categorías</a>
-            <a href="explorar.html" class="transition-colors duration-200 hover:text-emerald-400">Explorar</a>
-        </nav>
-        <p class="mt-6 text-sm text-green-200">&copy; 2026 Medellín Secreta</p>
-    </footer>
+    <footer id="pie"></footer>
+  <script src="../js/datos.js"></script><!-- primero los datos -->
+  <script src="../js/app.js"></script><!-- luego la lógica -->
 </body>
 </html>
