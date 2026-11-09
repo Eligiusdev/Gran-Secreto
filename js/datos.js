@@ -4,7 +4,7 @@
 const CATEGORIAS = [
   { id: 'naturaleza',  nombre: 'Naturaleza',                  imagen: 'img/naturaleza.jpg',         texto: 'Parques, jardines, bosques y espacios verdes para descansar al aire libre.' },
   { id: 'cafes',       nombre: 'Cafeterías',                  imagen: 'img/cafeterias.jpg',         texto: 'Cafés especiales, espacios acogedores y lugares para compartir.' },
-  { id: 'gastronomia', nombre: 'Gastronomía',                 imagen: 'img/plaza-minorista.jpg',    texto: 'Plazas y zonas para probar la comida tradicional y local.' },
+  { id: 'gastronomia', nombre: 'Gastronomía',                 imagen: 'img/gastronomia.jpg',    texto: 'Plazas y zonas para probar la comida tradicional y local.' },
   { id: 'miradores',   nombre: 'Miradores',                   imagen: 'img/mirador-las-palmas.jpg', texto: 'Lugares para contemplar Medellín desde las alturas.' },
   { id: 'arte',        nombre: 'Arte y cultura',              imagen: 'img/arte.png',               texto: 'Museos, murales, galerías, arte urbano y espacios históricos.' },
   { id: 'turismo',     nombre: 'Turismo y sitios históricos', imagen: 'img/pueblito.jpg',           texto: 'Lugares emblemáticos para conocer la historia y las tradiciones de la ciudad.' }
