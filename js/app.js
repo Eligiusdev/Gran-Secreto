@@ -3,15 +3,15 @@
   // ---------- Utilidades ----------
   const $ = (sel) => document.querySelector(sel);                    // atajo para buscar un elemento
   const raiz = document.body.dataset.raiz || '';                     // '' en index.html, '../' en /pages
-  const pagina = document.body.dataset.pagina;                       // nombre de la página, para marcar el menú
-  const limpiar = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); // sin tildes ni mayúsculas (HU-05)
-  const maps = (l) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(l.nombre + ' Medellín')}`; // enlace "cómo llegar"
-  const categoria = (id) => CATEGORIAS.find((c) => c.id === id);     // busca una categoría por id
+  const pagina = document.body.dataset.pagina;                       // nombre de la pagina, para marcar el menú
+  const limpiar = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); // sin tildes ni mayusculas (HU-05)
+  const maps = (l) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(l.nombre + ' Medellín')}`; // enlace "como llegar"
+  const categoria = (id) => CATEGORIAS.find((c) => c.id === id);     // busca una categoria por id
 
-  // ---------- Encabezado y pie (se escriben una sola vez para las 3 páginas) ----------
+  // ---------- Encabezado y pie (se escriben una sola vez para las 3 paginas) ----------
   const MENU = [['inicio', 'index.html', 'Inicio'], ['categorias', 'pages/categorias.html', 'Categorías'],
                 ['explorar', 'pages/explorar.html', 'Explorar'], ['favoritos', 'pages/explorar.html#favoritos', 'Favoritos']];
-  // Genera los enlaces del menú; el de la página actual se resalta y lleva aria-current (accesibilidad).
+  // Genera los enlaces del menu; el de la pagina actual se resalta y lleva aria-current (accesibilidad).
   const enlaces = (base, activa) => MENU.map(([k, ruta, txt]) =>
     `<a href="${raiz}${ruta}" ${k === pagina ? 'aria-current="page"' : ''} class="${base} ${k === pagina ? activa : ''}">${txt}</a>`).join('');
   $('#encabezado').className = 'sticky top-0 z-50 bg-green-900 text-white shadow-md';
