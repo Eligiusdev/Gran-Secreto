@@ -44,10 +44,13 @@
 
     <section class="buscador">
       <label for="buscador">Buscar un lugar</label>
-      <input type="search" id="buscador" placeholder="Escribe el nombre de un lugar">
+      <input type="search" id="buscador" aria-controls="catalogo" placeholder="Escribe el nombre de un lugar">
+      <p id="sin-resultados" class="mt-3 text-gray-600" role="status" aria-live="polite" hidden>
+        No encontramos lugares que coincidan con tu búsqueda.
+      </p>
     </section>
 
-    <section class="catalogo">
+    <section class="catalogo" id="catalogo" aria-label="Lugares para explorar">
 
       <article class="tarjeta">
         <img src="../img/jardin-botanico.jpg" alt="Jardín Botánico">
@@ -228,5 +231,37 @@
     <p class="mt-6 text-sm text-green-200">&copy; 2026 Medellín Secreta</p>
   </footer>
 
+  <script>
+    // Referencias a los controles reales de búsqueda, estado y tarjetas del catálogo.
+    const buscador = document.getElementById('buscador');
+    const catalogo = document.getElementById('catalogo');
+    const sinResultados = document.getElementById('sin-resultados');
+    const lugares = catalogo.querySelectorAll('.tarjeta');
+
+    // Normaliza tildes y mayúsculas para que la búsqueda sea más flexible.
+    function normalizar(texto) {
+      return texto
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase();
+    }
+
+    // Filtra las tarjetas por todo su texto y muestra un aviso cuando no hay coincidencias.
+    function filtrarLugares() {
+      const busqueda = normalizar(buscador.value.trim());
+      let cantidadVisible = 0;
+
+      lugares.forEach((lugar) => {
+        const coincide = normalizar(lugar.textContent).includes(busqueda);
+        lugar.hidden = !coincide;
+        if (coincide) cantidadVisible += 1;
+      });
+
+      sinResultados.hidden = cantidadVisible > 0;
+    }
+
+    // Actualiza el catálogo al escribir o borrar texto en el campo.
+    buscador.addEventListener('input', filtrarLugares);
+  </script>
 </body>
 </html>
