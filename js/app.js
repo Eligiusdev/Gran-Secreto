@@ -11,7 +11,7 @@
   // ---------- Encabezado y pie (se escriben una sola vez para las 3 páginas) ----------
   const MENU = [['inicio', 'index.html', 'Inicio'], ['categorias', 'pages/categorias.html', 'Categorías'],
                 ['explorar', 'pages/explorar.html', 'Explorar'], ['favoritos', 'pages/explorar.html#favoritos', 'Favoritos']];
-  // Genera los enlaces del menú; el de la página actual se resalta y lleva aria-current (accesibilidad).
+  // Generar los enlaces del menú; el de la página actual se resalta y lleva aria-current (accesibilidad).
   const enlaces = (base, activa) => MENU.map(([k, ruta, txt]) =>
     `<a href="${raiz}${ruta}" ${k === pagina ? 'aria-current="page"' : ''} class="${base} ${k === pagina ? activa : ''}">${txt}</a>`).join('');
   $('#encabezado').className = 'sticky top-0 z-50 bg-green-900 text-white shadow-md';
