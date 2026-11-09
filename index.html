@@ -3,34 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Descubre los lugares escondidos de Medellín con un encanto mágico.">
-  <title>Gran Secreto | Lugares escondidos de Medellín</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"><!-- iconos -->
-  <script src="https://cdn.tailwindcss.com"></script><!-- Tailwind CSS -->
+  <meta name="description" content="Descubre el lado oculto de Medellín: historias, rutas curadas y rincones auténticos recomendados por su comunidad.">
+  <meta name="theme-color" content="#14532d">
+  <title>Medellín Secreta | Descubre el lado oculto de la ciudad</title>
+  <link rel="stylesheet" href="css/tailwind.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-gray-50 text-gray-800" data-raiz="" data-pagina="inicio">
+<body class="bg-gray-50 text-gray-800 antialiased" data-raiz="" data-pagina="inicio">
+  <!-- Encabezado compartido: cambia solo la ruta y el enlace activo según la página. -->
   <header id="encabezado"></header><!-- lo llena app.js -->
+
   <main>
-    <!-- Bienvenida con eslogan (HU-01) -->
-    <section class="bg-gradient-to-br from-emerald-900 to-teal-600 px-6 py-24 text-center text-white">
-      <h1 class="mx-auto max-w-3xl text-4xl font-bold md:text-5xl">Descubre los secretos mejor guardados de Medellín</h1>
-      <p class="mx-auto mt-4 max-w-xl text-lg text-emerald-50">Rincones poco conocidos, con fotos, historias y cómo llegar.</p>
-      <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a href="pages/explorar.html" class="rounded-full bg-white px-6 py-3 font-bold text-emerald-900 hover:bg-emerald-50">Explorar lugares</a>
-        <a href="pages/categorias.html" class="rounded-full border border-white px-6 py-3 font-bold hover:bg-white/10">Ver categorías</a>
+    <!-- Presentación principal y accesos a las otras secciones. -->
+    <section class="relative isolate flex min-h-[76vh] items-center overflow-hidden bg-green-950 text-white">
+      <img src="./img/medellin.jpg" alt="" aria-hidden="true" class="absolute inset-0 -z-20 h-full w-full object-cover">
+      <div class="absolute inset-0 -z-10 bg-gradient-to-r from-green-950/95 via-green-950/75 to-green-950/35"></div>
+      <div class="mx-auto w-full max-w-7xl px-6 py-24 md:py-32">
+        <p class="mb-5 text-sm font-bold uppercase tracking-[0.2em] text-emerald-300">Descubre los secretos de tu ciudad</p>
+        <h1 class="max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-7xl">Descubre el lado oculto de Medellín</h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-green-50 md:text-xl">
+          Miradores secretos, cafés ocultos, historia urbana y rincones poco conocidos que revelan otra forma de vivir la ciudad.
+        </p>
+        <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+          <a href="./pages/explorar.html" class="inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-400 px-6 py-3 font-bold text-green-950 transition-colors duration-200 hover:bg-emerald-300">
+            Empezar a Explorar
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" />
+            </svg>
+          </a>
+          <a href="./pages/categorias.html" class="inline-flex items-center justify-center rounded-lg border border-white/80 px-6 py-3 font-bold text-white transition-colors duration-200 hover:border-emerald-300 hover:bg-white/10 hover:text-emerald-200">
+            Ver por Categorías
+          </a>
+        </div>
       </div>
     </section>
-    <!-- Qué puedes hacer -->
-    <section class="mx-auto grid max-w-6xl gap-6 px-6 py-14 md:grid-cols-3">
-      <div class="rounded-xl bg-white p-6 shadow"><i class="bi bi-search text-3xl text-emerald-700"></i><h2 class="mt-2 text-lg font-bold">Busca</h2><p class="text-gray-600">Encuentra un lugar por su nombre al instante.</p></div>
-      <div class="rounded-xl bg-white p-6 shadow"><i class="bi bi-grid text-3xl text-emerald-700"></i><h2 class="mt-2 text-lg font-bold">Filtra</h2><p class="text-gray-600">Elige cafés, miradores, naturaleza y más.</p></div>
-      <div class="rounded-xl bg-white p-6 shadow"><i class="bi bi-heart text-3xl text-emerald-700"></i><h2 class="mt-2 text-lg font-bold">Guarda</h2><p class="text-gray-600">Marca tus favoritos y encuéntralos al volver.</p></div>
+
+    <!-- Propuesta de valor: explica la plataforma sin duplicar el catálogo. -->
+    <section class="mx-auto max-w-7xl px-6 py-20 md:py-24">
+      <div class="mx-auto mb-12 max-w-2xl text-center">
+        <p class="font-bold uppercase tracking-widest text-emerald-700">Una ciudad, muchas historias</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-tight text-green-950 md:text-4xl">¿Qué es Medellín Secreta?</h2>
+        <p class="mt-4 leading-relaxed text-gray-600">Una guía para mirar Medellín con otros ojos, conectar con sus historias y descubrirla a tu propio ritmo.</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3">
+        <article class="rounded-2xl border border-green-100 bg-green-50/60 p-7">
+          <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-green-900 text-emerald-300">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-4.35 7-11a7 7 0 1 0-14 0c0 6.65 7 11 7 11Z" />
+              <circle cx="12" cy="10" r="2.25" />
+            </svg>
+          </div>
+          <h3 class="mt-5 text-xl font-bold text-green-950">1. Rincones Auténticos</h3>
+          <p class="mt-2 leading-relaxed text-gray-600">Historias y espacios que muestran la esencia cotidiana de Medellín, más allá de lo esperado.</p>
+        </article>
+        <article class="rounded-2xl border border-green-100 bg-green-50/60 p-7">
+          <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-green-900 text-emerald-300">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6.5 9 4l6 2.5L20 4v13.5L15 20l-6-2.5L4 20V6.5Z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 4v13.5m6-11v13.5" />
+            </svg>
+          </div>
+          <h3 class="mt-5 text-xl font-bold text-green-950">2. Rutas Curadas</h3>
+          <p class="mt-2 leading-relaxed text-gray-600">Ideas organizadas para que cada paseo tenga un hilo, un propósito y espacio para la sorpresa.</p>
+        </article>
+        <article class="rounded-2xl border border-green-100 bg-green-50/60 p-7">
+          <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-green-900 text-emerald-300">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m16 0v-2a4 4 0 0 0-3-3.87M14 3.13a4 4 0 0 1 0 7.75" />
+              <circle cx="10" cy="7" r="4" />
+            </svg>
+          </div>
+          <h3 class="mt-5 text-xl font-bold text-green-950">3. Comunidad Local</h3>
+          <p class="mt-2 leading-relaxed text-gray-600">Una mirada cercana que celebra el conocimiento, las voces y las recomendaciones de quienes viven aquí.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Un solo adelanto editorial, separado del catálogo de lugares. -->
+    <section class="bg-green-50 px-6 py-20 md:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-8">
+          <p class="font-bold uppercase tracking-widest text-emerald-700">Una pista para tu próxima salida</p>
+          <h2 class="mt-2 text-3xl font-bold tracking-tight text-green-950 md:text-4xl">El Secreto de la Semana</h2>
+        </div>
+        <article class="grid overflow-hidden rounded-3xl bg-green-900 text-white shadow-xl md:grid-cols-2">
+          <img src="./img/parque-arvi.jpg" alt="Sendero rodeado de naturaleza en el Parque Arví" loading="lazy" class="h-64 w-full object-cover md:h-full">
+          <div class="flex flex-col items-start justify-center p-8 md:p-12">
+            <span class="rounded-full bg-emerald-400/15 px-3 py-1 text-sm font-semibold text-emerald-300">Santa Elena · Naturaleza</span>
+            <h3 class="mt-5 text-2xl font-bold md:text-3xl">Parque Arví: una pausa entre montañas</h3>
+            <p class="mt-4 max-w-xl leading-relaxed text-green-100">Sus senderos y paisajes ofrecen un cambio de ritmo sin salir del valle. Reserva tiempo para recorrerlo con calma y revisar la información de visita antes de ir.</p>
+            <a href="./pages/explorar.html" class="mt-7 inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 font-bold text-green-950 transition-colors duration-200 hover:bg-emerald-100">
+              Descubrir más
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" />
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Invitación a participar; el sitio es una guía estática, no un formulario de envíos. -->
+    <section class="bg-green-900 px-6 py-16 text-center text-white md:py-20">
+      <div class="mx-auto max-w-3xl">
+        <p class="font-bold uppercase tracking-widest text-emerald-300">La ciudad también la cuentas tú</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-tight md:text-4xl">¿Conoces un secreto que merece ser contado?</h2>
+        <p class="mx-auto mt-4 max-w-2xl leading-relaxed text-green-100">Comparte la idea con tu gente, explora otras recomendaciones y ayúdanos a mantener viva la curiosidad por Medellín.</p>
+        <a href="./pages/explorar.html" class="mt-7 inline-flex items-center justify-center rounded-lg bg-emerald-400 px-6 py-3 font-bold text-green-950 transition-colors duration-200 hover:bg-emerald-300">Explora y comparte</a>
+      </div>
     </section>
   </main>
+
+  <!-- Pie compartido con las páginas de categorías y exploración. -->
   <footer id="pie"></footer>
   <script src="js/datos.js"></script><!-- primero los datos -->
   <script src="js/app.js"></script><!-- luego la lógica -->
