@@ -1,4 +1,244 @@
-div{
-    font-family: 'Arial', sans-serif;
-    background-color: #0073ff;
+:root {
+  --verde-100: #dcfce7;
+  --verde-700: #008236;
+  --verde-800: #016630;
+  --verde-900: #0d542b;
+  --gris-50: #f9fafb;
+  --gris-300: #d1d5dc;
+  --gris-600: #4a5565;
+  --gris-800: #1e2939;
 }
+ 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  background: var(--gris-50);
+  color: var(--gris-800);
+}
+ 
+img {
+  display: block;
+  max-width: 100%;
+}
+ 
+ul {
+  list-style: none;
+}
+ 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ 
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem max(1.5rem, calc((100% - 72rem) / 2 + 1.5rem));
+  background: var(--verde-900);
+  color: #fff;
+}
+ 
+.logo {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+ 
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+ 
+.nav-links a {
+  display: block;
+}
+ 
+.nav-links a:hover {
+  text-decoration: underline;
+}
+ 
+.nav-links a.activo {
+  font-weight: 700;
+  text-decoration: underline;
+}
+ 
+.contenedor {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+ 
+.encabezado h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  color: var(--verde-900);
+}
+ 
+.encabezado p {
+  margin-bottom: 2rem;
+  color: var(--gris-600);
+}
+ 
+.buscador {
+  margin-bottom: 2.5rem;
+}
+ 
+.buscador label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: var(--verde-900);
+}
+ 
+.buscador input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  background: #fff;
+  border: 2px solid var(--gris-300);
+  border-radius: 0.5rem;
+}
+ 
+.buscador input:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--verde-700);
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+ 
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+ 
+.tarjeta img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+ 
+.tarjeta-contenido {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.25rem;
+}
+ 
+.tarjeta h2 {
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: var(--verde-900);
+}
+ 
+.ubicacion {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  color: var(--verde-800);
+}
+ 
+.descripcion {
+  margin-bottom: 1rem;
+  color: var(--gris-600);
+}
+ 
+.caracteristicas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+ 
+.caracteristicas li {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--verde-900);
+  background: var(--verde-100);
+  border-radius: 9999px;
+}
+ 
+.boton {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background: var(--verde-900);
+  border-radius: 0.25rem;
+}
+ 
+.boton:hover {
+  background: var(--verde-700);
+}
+ 
+.footer {
+  padding: 1.25rem;
+  text-align: center;
+  color: #fff;
+  background: var(--verde-900);
+}
+ 
+.footer-nombre {
+  margin-bottom: 0.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+ 
+.footer-nombre + p {
+  margin-bottom: 0.75rem;
+}
+ 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+ 
+.footer-links a {
+  text-decoration: underline;
+}
+ 
+.footer-links a:hover {
+  text-decoration: none;
+}
+ 
+@media (min-width: 768px) {
+  .catalogo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+ 
+@media (min-width: 1024px) {
+  .catalogo {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+ 
